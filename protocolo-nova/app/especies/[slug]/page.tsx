@@ -8,7 +8,11 @@ export default async function EspecieDetallePage({
 }) {
   const { slug } = await params;
   // Aquí el parámetro 'slug' es parte de la URL, no del ?query
+<<<<<<< HEAD
   // Path params species/Alien/
+=======
+  // Path params species/Alien/ 
+>>>>>>> 561e369d49def3c5aea40cd54537b966e663e5dc
 
   //1. Consumir la api GET https://rickandmortyapi.com/api/character/?species=${slug}
 
