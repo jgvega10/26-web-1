@@ -3,25 +3,13 @@ import { useEffect, useState } from "react";
 import { Tripulante } from "../types/mission";
 import CardTripulante from "@/components/CardTripulante";
 
-import {Tripulante} from "../types/mission";
-import CardTripulante from "@/components/CardTripulante";
-
 export default function TripulacionPage() {
   // 🔴 TAREA ESTUDIANTE:
   // 1. Crear estado [tripulantes, setTripulantes]
   const [tripulantes, setTripulantes] = useState<Tripulante[]>([]);
   // 2. useEffect para llamar a 'https://dummyjson.com/users'
   useEffect(() => {
-<<<<<<< HEAD
-    const fetchUsers = async() => {
-      const response = await fetch('https://dummyjson.com/users')
-      const data = await response.json();
-      console.log(data.users);
-      setTripulantes(data.users)
-    }
-    fetchUsers();
-  }, [])
-=======
+
     const fetchUsers = async () => {
       const response = await fetch('https://dummyjson.com/users')
       const data = await response.json();
@@ -32,7 +20,6 @@ export default function TripulacionPage() {
     fetchUsers();
   }, [])
   
->>>>>>> 561e369d49def3c5aea40cd54537b966e663e5dc
   // 3. Mapear los datos a componentes Card
 
 
@@ -44,17 +31,7 @@ export default function TripulacionPage() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Renderizado de Cards aquí */}
-<<<<<<< HEAD
-
-        {/**}<p> Tengo {tripulantes.length} tripulantes</p>{*/}
-        {/**}<p>Bienvenido {tripulantes[0]?.firstName}</p>{*/}
-        {/**}<p>Bienvenido {tripulantes[tripulantes.length-1]?.firstName}</p>{*/}
         {tripulantes.map(tripulante => <CardTripulante key={tripulante.id} user={tripulante}/>)}
-
-=======
-        
-{tripulantes.map(tripulante => <CardTripulante key={tripulante.id} user={tripulante}/>)}
->>>>>>> 561e369d49def3c5aea40cd54537b966e663e5dc
       </div>
     </div>
   );
