@@ -16,6 +16,8 @@ export default function CardTripulante({ user }: { user: Tripulante }) {
       <Image 
         src={user.image} 
         alt={user.firstName} 
+        width={50}
+        height={50}
         className="mb-4 h-32 w-full rounded-lg object-cover grayscale group-hover:grayscale-0" 
       />
       <h3 className="font-mono text-lg font-bold text-emerald-400">

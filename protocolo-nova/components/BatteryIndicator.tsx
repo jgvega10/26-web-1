@@ -41,7 +41,7 @@ export default function BatteryIndicator() {
   }, []);
 
   // 3. Lógica de UI basada en condiciones
-  const isLowPower = battery.level <= 0.2;
+  const isLowPower = battery.level <= 0.8;
   const percentage = Math.round(battery.level * 100);
 
   return (
